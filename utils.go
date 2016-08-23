@@ -18,7 +18,7 @@ func NormalizePortString(port string) string {
 
 // Checks if the port string is valid and returns a normalized version
 // if it is
-func IsValidPortString(port string) bool {
+func IsValidPortString(port string) (bool, string) {
 	if port[0] == ':' {
 		port = strings.TrimPrefix(port, ":")
 	}
